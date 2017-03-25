@@ -1,0 +1,69 @@
+body {
+  background: white;
+  padding: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+.wrapper h1 {
+  color: black;
+  text-align: center;
+  font-size: 12vw;
+  position: relative;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.wrapper h1:before {
+  content: attr(data-heading);
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 52%;
+  color: white;
+  text-shadow: 3px -2px 5px white, -3px 3px 4px white;
+  text-align: center;
+}
+.wrapper h1:after {
+  content: attr(data-heading);
+  position: absolute;
+  left: 0;
+  -webkit-transform: translate(-10px, 0);
+          transform: translate(-10px, 0);
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  color: black;
+}
+
+h1.animated:after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-animation: fracture 5s infinite ease;
+          animation: fracture 5s infinite ease;
+}
+
+@-webkit-keyframes fracture {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-23px, 0);
+            transform: translate(-23px, 0);
+  }
+}
+
+@keyframes fracture {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-23px, 0);
+            transform: translate(-23px, 0);
+  }
+}
